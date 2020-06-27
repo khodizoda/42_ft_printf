@@ -1,0 +1,7 @@
+a.out
+a.out.dSYM
+*.txt
+test
+tests
+libft.a
+test.c
