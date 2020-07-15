@@ -6,13 +6,13 @@
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 16:37:28 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/02/25 16:37:33 by gkhodizo         ###   ########.fr       */
+/*   Updated: 2020/07/15 00:42:58 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 ** Allocate (with malloc(3)) and returns a “fresh” string ending with ’\0’
-** representing the integer n given as argument.Negative numbers must be
+** representing the integer n given as argument. Negative numbers must be
 ** supported. If the allocation fails, the function returns NULL.
 */
 

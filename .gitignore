@@ -1,6 +1,8 @@
 *.txt
 main.c
-test.c
+test*
 a.out
 a.out.dSYM
 *.o
+sample*
+*itoa*

@@ -6,7 +6,7 @@
 #    By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/19 15:57:52 by gkhodizo          #+#    #+#              #
-#    Updated: 2020/02/23 14:05:17 by gkhodizo         ###   ########.fr        #
+#    Updated: 2020/07/15 00:50:50 by gkhodizo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = libft.a
 
 CC = gcc
 
-CCFLAGS = -Wall -Wextra -Werror
+CFLAGS = -g -Wall -Wextra -Werror
 
 HEADER = -I libft.h
 
@@ -36,7 +36,10 @@ SRCS = $(addsuffix .c, $(NAMES))
 
 OBJ = $(addsuffix .o, $(NAMES))
 
+.SILENT:
+
 all: $(NAME)
+	@echo Compiling $(NAME)...
 
 $(NAME): $(OBJ)
 	ar rc $(NAME) $(OBJ)
@@ -46,8 +49,10 @@ $(OBJ):
 
 clean:
 	@/bin/rm -f $(OBJ)
+	@echo Deleting object files...
 
 fclean: clean
 	@/bin/rm -rf $(NAME)
+	@echo Deleting $(NAME)...
 
 re: fclean all

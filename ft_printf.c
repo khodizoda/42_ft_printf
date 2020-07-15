@@ -6,11 +6,10 @@
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/27 14:19:16 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/06/27 14:53:22 by gkhodizo         ###   ########.fr       */
+/*   Updated: 2020/07/15 00:51:26 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/libft.h"
 #include "ft_printf.h"
 
 int		ft_printf(const char *format, ...)
