@@ -1,8 +1,9 @@
+.vscode
+.DS_Store
+*.a
+*.o
 *.txt
 main.c
-test*
 a.out
 a.out.dSYM
-*.o
-sample*
-*itoa*
+test
