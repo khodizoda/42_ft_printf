@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   init_format.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/27 14:19:16 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/07/19 23:19:20 by gkhodizo         ###   ########.fr       */
+/*   Created: 2020/07/19 23:09:18 by gkhodizo          #+#    #+#             */
+/*   Updated: 2020/07/19 23:48:20 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int		ft_printf(const char *format, ...)
+void	init_format(t_fmt *fmt, t_buff *output)
 {
-	t_fmt	fmt;
-	t_buff	output;
-	va_list ap;
-
-	va_start(ap, format);
-	init_format(&fmt, &output);
-	parse_input(format, &ap, &fmt, &output);
-	va_end(ap);
-	return (0);
+	fmt->is_minus = 0;
+	fmt->is_zero = 0;
+	fmt->width = 0;
+	fmt->precision = -1;
+	fmt->spec_value = ft_strnew(1);			// MALLOC
+	output->buff = ft_strnew(1);			// MALLOC
+	output->buff_len = 0;
+	return ;
 }

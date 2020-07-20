@@ -6,7 +6,7 @@
 #    By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/07/15 00:44:17 by gkhodizo          #+#    #+#              #
-#    Updated: 2020/07/15 00:51:10 by gkhodizo         ###   ########.fr        #
+#    Updated: 2020/07/19 23:49:54 by gkhodizo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ CFLAGS =  -g -Wall -Wextra -Werror
 
 HEADER = -I ft_printf.h
 
-NAMES = ./ft_printf 
+NAMES = ./ft_printf ./init_format ./parse_input
 
 SRCS = $(addsuffix .c, $(NAMES))
 
