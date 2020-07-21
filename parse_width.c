@@ -6,8 +6,13 @@
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/19 22:13:25 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/07/19 22:21:35 by gkhodizo         ###   ########.fr       */
+/*   Updated: 2020/07/20 22:13:29 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+int		parse_width(const char *str, t_fmt *fmt, va_list *ap)
+{
+	return 	parse_numeric(str, &fmt->width, ap);
+}

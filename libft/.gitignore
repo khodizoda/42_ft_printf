@@ -1,7 +1,9 @@
+.vscode
+.DS_Store
+*.a
+*.o
+*.txt
+main.c
 a.out
 a.out.dSYM
-*.txt
 test
-tests
-libft.a
-test.c

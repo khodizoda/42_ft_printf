@@ -6,34 +6,37 @@
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/19 22:12:12 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/07/19 23:47:47 by gkhodizo         ###   ########.fr       */
+/*   Updated: 2020/07/20 22:42:15 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	parse_input(const char *str, va_list *ap, t_fmt *fmt, t_buff *output)
+void	parse_input(const char *str, t_fmt *fmt, t_buff *output, va_list *ap)
 {
-	int i;
-
-	i = 0;
-	while (str[i] != '\0')
+	while (1)
 	{
-		if (str[i] == '%')
+		if (*str == '\0')
+			break ;
+		if (*str == '%')
 		{
-			break;
-			//parse_flags();
-			//parse_width();
-			//parse_precision();
-		 	//parse_specifier();
+			++str;
+			str += parse_flags(str, fmt);
+			str += parse_width(str, fmt, ap);
+			str += parse_precision(str, fmt, ap);
+		 	parse_specifier(str, fmt, ap);
 		}
 		else 
 		{
-			ft_strncat(output->buff, &str[i], 1);
+			ft_strncat(output->buff, str, 1);  // DON'T HAVE ENOUGH MEMORY IN output->buff
 			++output->buff_len;
+			++str;
 		}	
-		++i;	
 	}
-	printf("len is %zu and str is %s\n", output->buff_len, output->buff);
+	printf("flag zero is %zu, minus is %zu\n", fmt->is_zero, fmt->is_minus);
+	printf("width is %zu\n", fmt->width);
+	printf("precision is %zu\n", fmt->precision);
+	printf("specifier is %c\n", fmt->specifier);
+	printf("%zu : %s\n", output->buff_len, output->buff);
 	return ;
 }
