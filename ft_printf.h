@@ -6,7 +6,7 @@
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/27 14:17:59 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/07/20 23:09:30 by gkhodizo         ###   ########.fr       */
+/*   Updated: 2020/07/22 16:15:49 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdarg.h>
-# include <stdio.h>			//remove
 
 # include "./libft/libft.h"
 
@@ -27,12 +26,13 @@ typedef struct	s_fmt
 	ssize_t		width;
 	ssize_t		precision;
 	char		specifier;
-	char		*spec_value;
+	char		*spec_value;		// create linked list instead?
+	char		tmp;				// remove
 }				t_fmt;
 
 typedef struct	s_buff
 {
-	char		*buff;
+	char		*buff;				// create linked list instead?
 	size_t		buff_len;
 }				t_buff;
 
@@ -54,7 +54,19 @@ int				parse_width(const char *str, t_fmt *fmt, va_list *ap);
 int				parse_precision(const char *str, t_fmt *fmt, va_list *ap);
 int				parse_numeric(const char *str, ssize_t *fmt, va_list *ap);
 int				parse_specifier(const char *str, t_fmt *fmt, va_list *ap);
-//void			parse_spec_value(t_fmt *fmt, va_list *ap);
+void			parse_spec_value(t_fmt *fmt, va_list *ap);
+
+/*
+**	convert specifiers
+*/
+
+unsigned char	convert_char(int c);
+
+/*
+**	print structs
+*/
+
+void			print_struct(t_fmt *fmt, t_buff *output); 	// remove
 
 /*
 ** move to libft
