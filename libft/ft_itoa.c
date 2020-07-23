@@ -6,7 +6,7 @@
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 16:37:28 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/07/15 00:42:58 by gkhodizo         ###   ########.fr       */
+/*   Updated: 2020/07/23 01:37:46 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,28 +18,6 @@
 
 #include "libft.h"
 
-static int		int_len(int n)
-{
-	int len;
-
-	len = 0;
-	if (n <= 0)
-		++len;
-	while (n != 0)
-	{
-		n = n / 10;
-		++len;
-	}
-	return (len);
-}
-
-static int		to_positive(int n)
-{
-	if (n > 0)
-		return (n);
-	return (n * (-1));
-}
-
 char			*ft_itoa(int n)
 {
 	long	num;
@@ -47,7 +25,7 @@ char			*ft_itoa(int n)
 	char	*res;
 
 	num = n;
-	len = int_len(num);
+	len = ft_int_len(num);
 	res = (char *)malloc((len + 1) * sizeof(char));
 	if (!res)
 		return (NULL);
@@ -58,7 +36,7 @@ char			*ft_itoa(int n)
 	res[len] = '\0';
 	while (num != 0)
 	{
-		res[--len] = to_positive(num % 10) + '0';
+		res[--len] = ft_absolute_val(num % 10) + '0';
 		num = num / 10;
 	}
 	return (res);

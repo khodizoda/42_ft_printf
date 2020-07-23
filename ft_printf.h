@@ -6,7 +6,7 @@
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/27 14:17:59 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/07/22 16:15:49 by gkhodizo         ###   ########.fr       */
+/*   Updated: 2020/07/23 00:53:51 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,7 @@ typedef struct	s_fmt
 	ssize_t		width;
 	ssize_t		precision;
 	char		specifier;
-	char		*spec_value;		// create linked list instead?
-	char		tmp;				// remove
+	char		*spec_value;
 }				t_fmt;
 
 typedef struct	s_buff
@@ -42,6 +41,7 @@ typedef struct	s_buff
 
 int				ft_printf(const char *format, ...);
 void			init_format(t_fmt *fmt, t_buff *output);
+void			reset_format(t_fmt *fmt);
 
 /*
 **	parse format string
@@ -63,13 +63,9 @@ void			parse_spec_value(t_fmt *fmt, va_list *ap);
 unsigned char	convert_char(int c);
 
 /*
-**	print structs
+**	test functions to REMOVE:
 */
 
-void			print_struct(t_fmt *fmt, t_buff *output); 	// remove
-
-/*
-** move to libft
-*/
+void			test_struct(t_fmt *fmt, t_buff *output);
 
 #endif

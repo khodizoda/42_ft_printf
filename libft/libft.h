@@ -6,7 +6,7 @@
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/18 20:10:07 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/02/23 14:30:59 by gkhodizo         ###   ########.fr       */
+/*   Updated: 2020/07/23 01:37:03 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,5 +112,13 @@ size_t				ft_lstlen(t_list **alst);
 void				ft_lstdelbegin(t_list **alst);
 void				ft_lstdelend(t_list **alst);
 void				ft_print_bits(unsigned char octet);
+
+/*
+**		NEW F-NS:
+*/
+
+void				ft_putstr_len(char *str, size_t len);
+int					ft_int_len(int n);
+int					ft_absolute_val(int n);
 
 #endif

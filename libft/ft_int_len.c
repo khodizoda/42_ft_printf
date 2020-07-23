@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_int_len.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/27 14:19:16 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/07/23 01:01:55 by gkhodizo         ###   ########.fr       */
+/*   Created: 2020/07/23 01:34:25 by gkhodizo          #+#    #+#             */
+/*   Updated: 2020/07/23 01:34:56 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-int		ft_printf(const char *format, ...)
+int		ft_int_len(int n)
 {
-	t_fmt	fmt;
-	t_buff	output;
-	va_list ap;
+	int len;
 
-	va_start(ap, format);
-	init_format(&fmt, &output);
-	parse_input(format, &fmt, &output, &ap);
-	test_struct(&fmt, &output); 					//remove
-	ft_putstr_len(output.buff, output.buff_len);
-	ft_strdel(&output.buff); 						//FREE_MALLOC_2
-	va_end(ap);
-	return (output.buff_len);
+	len = 0;
+	if (n <= 0)
+		++len;
+	while (n != 0)
+	{
+		n = n / 10;
+		++len;
+	}
+	return (len);
 }

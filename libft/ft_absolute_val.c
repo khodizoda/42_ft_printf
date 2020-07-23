@@ -1,29 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_absolute_val.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/27 14:19:16 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/07/23 01:01:55 by gkhodizo         ###   ########.fr       */
+/*   Created: 2020/07/23 01:36:15 by gkhodizo          #+#    #+#             */
+/*   Updated: 2020/07/23 01:36:34 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-int		ft_printf(const char *format, ...)
+int		ft_absolute_val(int n)
 {
-	t_fmt	fmt;
-	t_buff	output;
-	va_list ap;
-
-	va_start(ap, format);
-	init_format(&fmt, &output);
-	parse_input(format, &fmt, &output, &ap);
-	test_struct(&fmt, &output); 					//remove
-	ft_putstr_len(output.buff, output.buff_len);
-	ft_strdel(&output.buff); 						//FREE_MALLOC_2
-	va_end(ap);
-	return (output.buff_len);
+	if (n > 0)
+		return (n);
+	return (n * (-1));
 }
