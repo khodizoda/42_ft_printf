@@ -6,9 +6,13 @@
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/19 22:12:12 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/07/23 00:38:19 by gkhodizo         ###   ########.fr       */
+/*   Updated: 2020/07/23 23:58:05 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+** The parse_input() parses each char in str.
+*/
 
 #include "ft_printf.h"
 
@@ -33,6 +37,8 @@ void	parse_input(const char *str, t_fmt *fmt, t_buff *output, va_list *ap)
 			++output->buff_len;
 			++str;
 		}
+		// print format str?
+		//write(1, &output->buff, output->buff_len);
 	}
 	return ;
 }

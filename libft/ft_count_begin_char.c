@@ -1,35 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   parse_specifier.c                                  :+:      :+:    :+:   */
+/*   ft_count_begin_char.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/19 22:13:16 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/07/24 00:09:10 by gkhodizo         ###   ########.fr       */
+/*   Created: 2020/07/23 22:30:07 by gkhodizo          #+#    #+#             */
+/*   Updated: 2020/07/23 23:31:00 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** The parse_specifier() parses specifier from str, and uses
-** parse_spec_values() to parse specifiers values from the va_list.
-** Retuns number of chars parsed.
+** The ft_count_begin_char() counts occurrences of char c in the
+** beginning of string str.
+** Returns the count of char c in str.
 */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-int		parse_specifier(const char *str, t_fmt *fmt, va_list *ap)
+size_t	ft_count_begin_char(char *str, char c)
 {
-	int		i;
-	char	*specs;
+	size_t	i;
 
 	i = 0;
-	specs = "cspdiuxX%%";
-	if (ft_strchr(specs, str[i]))
-	{
-		fmt->specifier = str[i];
+	while (str[i] == c)
 		++i;
-		parse_spec_value(fmt, ap);
-	}
 	return (i);
 }

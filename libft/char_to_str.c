@@ -1,35 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   parse_specifier.c                                  :+:      :+:    :+:   */
+/*   char_to_str.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/19 22:13:16 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/07/24 00:09:10 by gkhodizo         ###   ########.fr       */
+/*   Created: 2020/07/23 21:33:16 by gkhodizo          #+#    #+#             */
+/*   Updated: 2020/07/23 23:42:10 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** The parse_specifier() parses specifier from str, and uses
-** parse_spec_values() to parse specifiers values from the va_list.
-** Retuns number of chars parsed.
+** The char_to_str() takes a char and creates new str with malloc,
+** by appending char and '\0'.
+** Returns str.
 */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-int		parse_specifier(const char *str, t_fmt *fmt, va_list *ap)
+char	*char_to_str(char c)
 {
-	int		i;
-	char	*specs;
+	char	*out;
 
-	i = 0;
-	specs = "cspdiuxX%%";
-	if (ft_strchr(specs, str[i]))
-	{
-		fmt->specifier = str[i];
-		++i;
-		parse_spec_value(fmt, ap);
-	}
-	return (i);
+	out = ft_strnew(1);
+	out[0] = c;
+	return (out);
 }

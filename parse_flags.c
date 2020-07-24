@@ -6,9 +6,15 @@
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/19 22:12:37 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/07/22 16:17:19 by gkhodizo         ###   ########.fr       */
+/*   Updated: 2020/07/23 23:56:25 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+** The parse_flags() looks for '-' and '0' flags in string, and if one
+** is found it sets that flag's var to 1.
+** Retuns number of chars parsed.
+*/
 
 #include "ft_printf.h"
 

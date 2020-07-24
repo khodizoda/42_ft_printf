@@ -6,9 +6,15 @@
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/27 14:19:16 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/07/23 01:01:55 by gkhodizo         ###   ########.fr       */
+/*   Updated: 2020/07/23 23:44:31 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+** The ft_printf() takes a string and variading arguments, then formats and
+** prints string to stdout.
+** Returns num of printed chars.
+*/
 
 #include "ft_printf.h"
 

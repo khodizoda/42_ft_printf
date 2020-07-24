@@ -6,7 +6,7 @@
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/18 20:10:07 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/07/23 01:37:03 by gkhodizo         ###   ########.fr       */
+/*   Updated: 2020/07/23 23:32:34 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,7 +118,13 @@ void				ft_print_bits(unsigned char octet);
 */
 
 void				ft_putstr_len(char *str, size_t len);
-int					ft_int_len(int n);
+size_t				ft_int_len(long int n);
 int					ft_absolute_val(int n);
+char				*ft_itoa_unsigned(unsigned long int n);
+char				*ft_itoa_base_unsigned(unsigned long long int n, int base);
+char				*char_to_str(char c);
+size_t				ft_count_begin_char(char *str, char c);
+char				*ft_strsubjoin(char const *s1, char const *s2,
+					unsigned int s2_start);
 
 #endif

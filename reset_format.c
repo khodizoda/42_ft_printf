@@ -6,13 +6,17 @@
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/23 00:03:35 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/07/23 02:03:38 by gkhodizo         ###   ########.fr       */
+/*   Updated: 2020/07/24 00:12:20 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** The reset_format() resets fmt struct.
+*/
+
 #include "ft_printf.h"
 
-void	reset_format(t_fmt *fmt) 
+void	reset_format(t_fmt *fmt)
 {
 	fmt->is_minus = 0;
 	fmt->is_zero = 0;

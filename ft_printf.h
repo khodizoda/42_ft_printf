@@ -6,7 +6,7 @@
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/27 14:17:59 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/07/23 00:53:51 by gkhodizo         ###   ########.fr       */
+/*   Updated: 2020/07/23 22:16:36 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ typedef struct	s_fmt
 typedef struct	s_buff
 {
 	char		*buff;				// create linked list instead?
-	size_t		buff_len;
+	size_t		buff_len;			// should return -1 if error occurs
 }				t_buff;
 
 /*
@@ -57,10 +57,10 @@ int				parse_specifier(const char *str, t_fmt *fmt, va_list *ap);
 void			parse_spec_value(t_fmt *fmt, va_list *ap);
 
 /*
-**	convert specifiers
+**	format specifiers
 */
 
-unsigned char	convert_char(int c);
+char			*format_hex(char *hex, char c);
 
 /*
 **	test functions to REMOVE:

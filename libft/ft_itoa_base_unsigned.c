@@ -1,41 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmap.c                                        :+:      :+:    :+:   */
+/*   ft_itoa_base_unsigned.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/23 12:48:23 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/07/23 21:19:40 by gkhodizo         ###   ########.fr       */
+/*   Created: 2020/07/23 15:19:11 by gkhodizo          #+#    #+#             */
+/*   Updated: 2020/07/23 23:36:14 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** Applies the function f to each character of the string given as argument
-** to create a “fresh” new string (with malloc(3)) resulting from the
-** successive applications of f.
+** The ft_itoa_base_unsigned() converts unsigned long long int to string
+** given int base. If the allocation fails, the function returns NULL.
 */
 
 #include "libft.h"
 
-char	*ft_strmap(char const *s, char (*f)(char))
+char	*ft_itoa_base_unsigned(unsigned long long int n, int base)
 {
-	size_t	i;
+	long	tmp;
+	char	*res;
 	size_t	len;
-	char	*new;
-	char	*cs;
 
-	i = 0;
-	len = ft_strlen(s);
-	new = (char *)malloc((len + 1) * sizeof(char));
-	cs = (char *)s;
-	if (!new)
+	len = ft_int_len(n);
+	if (!(res = (char *)malloc((len + 1) * sizeof(char))))
 		return (NULL);
-	while (s[i] != '\0')
+	res[len] = '\0';
+	while (len--)
 	{
-		new[i] = f(cs[i]);
-		i++;
+		tmp = n % base;
+		res[len] = (tmp < 10) ? tmp + '0' : tmp + '7';
+		n /= base;
 	}
-	new[i] = '\0';
-	return (new);
+	return (res);
 }

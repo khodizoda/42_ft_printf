@@ -6,7 +6,7 @@
 #    By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/07/15 00:44:17 by gkhodizo          #+#    #+#              #
-#    Updated: 2020/07/23 01:00:33 by gkhodizo         ###   ########.fr        #
+#    Updated: 2020/07/23 23:52:06 by gkhodizo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,7 @@ HEADER = -I ft_printf.h
 
 NAMES = ./ft_printf \
 		./init_format \
+		./reset_format \
 		./parse_input \
 		./parse_flags \
 		./parse_width \
@@ -27,7 +28,7 @@ NAMES = ./ft_printf \
 		./parse_numeric \
 		./parse_specifier \
 		./parse_spec_value \
-		./reset_format \
+		./format_hex \
 		./test_struct \
 
 SRCS = $(addsuffix .c, $(NAMES))
