@@ -6,11 +6,13 @@
 #    By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/07/15 00:44:17 by gkhodizo          #+#    #+#              #
-#    Updated: 2020/07/25 00:37:43 by gkhodizo         ###   ########.fr        #
+#    Updated: 2020/07/25 00:49:08 by gkhodizo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
+
+LIBFT = ./libft/libft.a
 
 CC = gcc
 
@@ -45,8 +47,13 @@ OBJ = $(addsuffix .o, $(NAMES))
 all: $(NAME)
 	@echo Compiling $(NAME)...
 
-$(NAME): $(OBJ)
+$(LIBFT):
+	make -C libft/
+
+$(NAME): $(LIBFT) $(OBJ)
+	cp $(LIBFT) $(NAME)
 	ar rc $(NAME) $(OBJ)
+	ranlib $(NAME)
 
 $(OBJ):
 	$(CC) $(CFLAGS) -c $(SRCS)
