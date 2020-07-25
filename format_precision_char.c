@@ -6,7 +6,7 @@
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/24 15:14:46 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/07/25 00:15:01 by gkhodizo         ###   ########.fr       */
+/*   Updated: 2020/07/25 00:44:57 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	format_precision_char(t_fmt *fmt)
 
 	if ((fmt->precision == 0
 		&& (fmt->specifier == 'c' || fmt->specifier == 'p'))
-		|| (fmt->precision >= 0 && fmt->specifier == '%'))
+		|| (fmt->precision && fmt->specifier == '%'))
 		return ;
 	len = ft_strlen(fmt->spec_value);
 	if (fmt->specifier == 's'
