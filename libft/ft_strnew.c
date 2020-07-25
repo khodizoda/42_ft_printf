@@ -6,7 +6,7 @@
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/21 19:31:31 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/02/21 19:31:33 by gkhodizo         ###   ########.fr       */
+/*   Updated: 2020/07/25 01:26:30 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*ft_strnew(size_t size)
 		return (NULL);
 	else
 	{
-		while (i < size + 1)
+		while (i < size)
 		{
 			new[i] = '\0';
 			i++;

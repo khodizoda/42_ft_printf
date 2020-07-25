@@ -6,7 +6,7 @@
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 13:45:34 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/02/19 13:45:35 by gkhodizo         ###   ########.fr       */
+/*   Updated: 2020/07/25 01:26:43 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	*ft_memccpy(void *restrict dst, const void *restrict src,
 	{
 		cdst[i] = csrc[i];
 		if (csrc[i] == (unsigned char)c)
-			return (&dst[i + 1]);
+			return (&cdst[i + 1]);
 		i++;
 	}
 	return (NULL);
