@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   reset_format.c                                     :+:      :+:    :+:   */
+/*   format_precision_num.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/23 00:03:35 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/07/24 23:56:55 by gkhodizo         ###   ########.fr       */
+/*   Created: 2020/07/24 15:14:55 by gkhodizo          #+#    #+#             */
+/*   Updated: 2020/07/25 00:21:27 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** The reset_format() resets fmt struct.
+** The format_precision_num() formats str only for numeric specifiers
+** i.e. "diuxX" given precision.
 */
 
 #include "ft_printf.h"
 
-void	reset_format(t_fmt *fmt)
+void	format_precision_num(t_fmt *fmt)
 {
-	fmt->is_minus = 0;
-	fmt->is_zero = 0;
-	fmt->width = 0;
-	fmt->is_precision = 0;
-	fmt->precision = 0;
-	fmt->specifier = '0';
-	ft_strdel(&fmt->spec_value);
+	size_t len;
+
+	len = ft_strlen(fmt->spec_value);
+	if (fmt->precision == 0 && (ft_strcmp(fmt->spec_value, "0") == 0))
+		fmt->spec_value =
+		free_n_copy(fmt->spec_value, 0, (int)fmt->precision);
+	if (fmt->precision > len)
+		fmt->spec_value =
+		format_padding(fmt->spec_value, '0', fmt->precision, 0);
 	return ;
 }

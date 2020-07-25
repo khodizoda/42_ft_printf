@@ -6,7 +6,7 @@
 #    By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/19 15:57:52 by gkhodizo          #+#    #+#              #
-#    Updated: 2020/07/23 22:47:41 by gkhodizo         ###   ########.fr        #
+#    Updated: 2020/07/24 19:43:05 by gkhodizo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,7 @@ NAMES = ./ft_memset ./ft_bzero ./ft_memcpy ./ft_memccpy ./ft_memmove \
 		./ft_lstlen ./ft_lstdelbegin ./ft_lstdelend ./ft_print_bits \
 		./ft_putstr_len ./ft_int_len ./ft_absolute_val ./ft_itoa_unsigned \
 		./ft_itoa_base_unsigned ./char_to_str ./ft_count_begin_char \
-		./ft_strsubjoin \
+		./ft_strsubjoin ./free_n_copy \
 
 
 SRCS = $(addsuffix .c, $(NAMES))

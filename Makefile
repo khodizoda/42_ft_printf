@@ -6,7 +6,7 @@
 #    By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/07/15 00:44:17 by gkhodizo          #+#    #+#              #
-#    Updated: 2020/07/23 23:52:06 by gkhodizo         ###   ########.fr        #
+#    Updated: 2020/07/24 20:22:44 by gkhodizo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,6 +29,12 @@ NAMES = ./ft_printf \
 		./parse_specifier \
 		./parse_spec_value \
 		./format_hex \
+		./format_input \
+		./format_padding \
+		./format_precision_char \
+		./format_precision_num \
+		./format_width_char \
+		./format_width_num \
 		./test_struct \
 
 SRCS = $(addsuffix .c, $(NAMES))

@@ -6,7 +6,7 @@
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/19 22:13:16 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/07/24 00:09:10 by gkhodizo         ###   ########.fr       */
+/*   Updated: 2020/07/24 21:57:35 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 #include "ft_printf.h"
 
-int		parse_specifier(const char *str, t_fmt *fmt, va_list *ap)
+int		parse_specifier(char *str, t_fmt *fmt, va_list *ap)
 {
 	int		i;
 	char	*specs;

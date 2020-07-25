@@ -6,7 +6,7 @@
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/19 22:12:12 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/07/23 23:58:05 by gkhodizo         ###   ########.fr       */
+/*   Updated: 2020/07/25 00:27:18 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,29 +16,44 @@
 
 #include "ft_printf.h"
 
-void	parse_input(const char *str, t_fmt *fmt, t_buff *output, va_list *ap)
+static int	parse_format(char *str, t_fmt *fmt, va_list *ap)
 {
-	while (1)
+	int i;
+
+	i = 0;
+	i += parse_flags((str + i), fmt);
+	i += parse_width((str + i), fmt, ap);
+	i += parse_precision((str + i), fmt, ap);
+	i += parse_specifier((str + i), fmt, ap);
+	return (i);
+}
+
+void		parse_input(char *str, t_fmt *fmt, t_len *pf_len, va_list *ap)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	while (str[i] != '\0')
 	{
-		if (*str == '\0')
-			break ;
-		if (*str == '%')
+		if (str[i] == '%')
 		{
-			++str;
+			++i;
 			reset_format(fmt);
-			str += parse_flags(str, fmt);
-			str += parse_width(str, fmt, ap);
-			str += parse_precision(str, fmt, ap);
-			str += parse_specifier(str, fmt, ap);
+			i += parse_format((str + i), fmt, ap);
+			format_input(fmt, pf_len);
 		}
 		else
 		{
-			ft_strncat(output->buff, str, 1);	  // DON'T HAVE ENOUGH MEMORY IN output->buff // create linked list instead?
-			++output->buff_len;
-			++str;
+			j = 0;
+			while (str[i] != '%' && str[i] != '\0')
+			{
+				++pf_len->print_len;
+				++j;
+				++i;
+			}
+			ft_putstr_len((str + i - j), j);
 		}
-		// print format str?
-		//write(1, &output->buff, output->buff_len);
 	}
 	return ;
 }

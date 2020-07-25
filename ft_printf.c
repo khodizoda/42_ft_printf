@@ -6,7 +6,7 @@
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/27 14:19:16 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/07/23 23:44:31 by gkhodizo         ###   ########.fr       */
+/*   Updated: 2020/07/25 00:26:45 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,15 @@
 int		ft_printf(const char *format, ...)
 {
 	t_fmt	fmt;
-	t_buff	output;
+	t_len	pf_len;
 	va_list ap;
+	char	*cformat;
 
 	va_start(ap, format);
-	init_format(&fmt, &output);
-	parse_input(format, &fmt, &output, &ap);
-	test_struct(&fmt, &output); 					//remove
-	ft_putstr_len(output.buff, output.buff_len);
-	ft_strdel(&output.buff); 						//FREE_MALLOC_2
+	cformat = (char *)format;
+	init_format(&fmt, &pf_len);
+	parse_input(cformat, &fmt, &pf_len, &ap);
+	ft_strdel(&fmt.spec_value);
 	va_end(ap);
-	return (output.buff_len);
+	return (pf_len.print_len);
 }

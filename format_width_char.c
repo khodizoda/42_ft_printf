@@ -1,37 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   parse_flags.c                                      :+:      :+:    :+:   */
+/*   format_width_char.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/19 22:12:37 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/07/24 21:57:16 by gkhodizo         ###   ########.fr       */
+/*   Created: 2020/07/24 15:15:04 by gkhodizo          #+#    #+#             */
+/*   Updated: 2020/07/25 00:20:11 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** The parse_flags() looks for '-' and '0' flags in string, and if one
-** is found it sets that flag's var to 1.
-** Retuns number of chars parsed.
+** The format_width_char() formats str only for char specifiers
+** i.e. "csp%" given width and flags.
 */
 
 #include "ft_printf.h"
 
-int		parse_flags(char *str, t_fmt *fmt)
+void	format_width_char(t_fmt *fmt)
 {
-	int i;
+	size_t len;
 
-	i = 0;
-	while (1)
-	{
-		if (str[i] != '-' && str[i] != '0')
-			break ;
-		if (str[i] == '-')
-			fmt->is_minus = 1;
-		if (str[i] == '0')
-			fmt->is_zero = 1;
-		++i;
-	}
-	return (i);
+	len = ft_strlen(fmt->spec_value);
+	if (fmt->width > len)
+		fmt->spec_value = format_padding(fmt->spec_value, ' ',
+						fmt->width, (int)fmt->is_minus);
+	return ;
 }
