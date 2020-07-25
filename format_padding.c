@@ -6,7 +6,7 @@
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/24 19:04:26 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/07/24 21:41:31 by gkhodizo         ###   ########.fr       */
+/*   Updated: 2020/07/25 01:37:18 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,7 @@ char	*format_padding(char *str, int c, size_t reslen, int flag)
 
 	strlen = ft_strlen(str);
 	sclen = reslen - strlen;
-	if (!(schar = (char *)malloc((sclen + 1) * sizeof(char))))
-		return (NULL);
+	schar = ft_strnew(sclen);
 	schar = ft_memset(schar, c, sclen);
 	if (flag == 0)
 		new = ft_strjoin(schar, str);
