@@ -6,7 +6,7 @@
 #    By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/07/15 00:44:17 by gkhodizo          #+#    #+#              #
-#    Updated: 2020/07/24 20:22:44 by gkhodizo         ###   ########.fr        #
+#    Updated: 2020/07/25 00:37:43 by gkhodizo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,6 @@ NAMES = ./ft_printf \
 		./format_precision_num \
 		./format_width_char \
 		./format_width_num \
-		./test_struct \
 
 SRCS = $(addsuffix .c, $(NAMES))
 
