@@ -6,7 +6,7 @@
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/23 22:10:00 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/07/26 15:26:12 by gkhodizo         ###   ########.fr       */
+/*   Updated: 2020/07/27 02:21:24 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,8 @@ char	*format_hex(char *hex, char c)
 	if (c == 'x' || c == 'X')
 		new = ft_strsub(hex, rem, len);
 	else if (c == 'p')
-		new = ft_strsubjoin("0x", hex, rem);
+		new = rem == len ? ft_strsubjoin("0x", "0", 0) :
+							ft_strsubjoin("0x", hex, rem);
 	ft_strdel(&hex);
 	len = ft_strlen(new);
 	if (c == 'x' || c == 'p')
