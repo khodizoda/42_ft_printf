@@ -6,7 +6,7 @@
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/24 15:16:53 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/07/26 15:53:34 by gkhodizo         ###   ########.fr       */
+/*   Updated: 2020/07/26 23:17:55 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@
 
 void	format_input(t_fmt *fmt, t_len *pf_len)
 {
-	size_t	len;
-
 	if (ft_strchr("csp%", fmt->specifier))
 	{
 		format_precision_char(fmt);
@@ -34,8 +32,8 @@ void	format_input(t_fmt *fmt, t_len *pf_len)
 		format_precision_num(fmt);
 		format_width_num(fmt);
 	}
-	len = ft_strlen(fmt->spec_value);
-	pf_len->print_len += len;
-	ft_putstr_len(fmt->spec_value, len);
+	fmt->value_len = ft_strlen(fmt->spec_value);
+	pf_len->print_len += fmt->value_len;
+	ft_putstr_len(fmt->spec_value, fmt->value_len);
 	return ;
 }

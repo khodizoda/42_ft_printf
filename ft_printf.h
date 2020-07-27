@@ -6,7 +6,7 @@
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/27 14:17:59 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/07/24 23:53:21 by gkhodizo         ###   ########.fr       */
+/*   Updated: 2020/07/26 23:07:32 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ typedef struct	s_fmt
 	size_t		precision;
 	char		specifier;
 	char		*spec_value;
+	size_t		value_len;
 }				t_fmt;
 
 typedef struct	s_len

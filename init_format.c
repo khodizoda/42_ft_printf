@@ -6,7 +6,7 @@
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/19 23:09:18 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/07/24 23:47:22 by gkhodizo         ###   ########.fr       */
+/*   Updated: 2020/07/26 23:08:03 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ void	init_format(t_fmt *fmt, t_len *pf_len)
 	fmt->precision = 0;
 	fmt->specifier = '0';
 	fmt->spec_value = NULL;
+	fmt->value_len = 0;
 	pf_len->print_len = 0;
 	return ;
 }
