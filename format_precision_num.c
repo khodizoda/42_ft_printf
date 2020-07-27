@@ -6,7 +6,7 @@
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/24 15:14:55 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/07/26 23:16:57 by gkhodizo         ###   ########.fr       */
+/*   Updated: 2020/07/26 23:24:17 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,5 @@ void	format_precision_num(t_fmt *fmt)
 	if (fmt->precision > fmt->value_len)
 		fmt->spec_value =
 		format_padding(fmt->spec_value, '0', fmt->precision, 0);
-	fmt->value_len = ft_strlen(fmt->spec_value);
 	return ;
 }
