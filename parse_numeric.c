@@ -6,41 +6,28 @@
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/20 21:27:12 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/07/25 00:23:37 by gkhodizo         ###   ########.fr       */
+/*   Updated: 2020/07/27 01:45:55 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** The parse_numberic() sets a numeric value to fmt variable found either in
-** va_list or in the string.
+** The parse_numberic() sets a numeric value to fmt variable
+** found inside the string.
 ** Retuns number of chars parsed.
 */
 
 #include "ft_printf.h"
 
-int		parse_numeric(char *str, size_t *fmt, va_list *ap)
+int	parse_numeric(char *str, size_t *fmt)
 {
 	int		i;
-	int		num_len;
 	char	*out;
 
 	i = 0;
-	if (str[i] == '*')
-	{
-		*fmt = va_arg(*ap, int);
+	while (ft_isdigit(str[i]))
 		++i;
-	}
-	else if (ft_isdigit(str[i]))
-	{
-		num_len = 0;
-		while (ft_isdigit(str[i]))
-		{
-			++num_len;
-			++i;
-		}
-		out = ft_strsub(str, 0, num_len);
-		*fmt = ft_atoi(out);
-		ft_strdel(&out);
-	}
+	out = ft_strsub(str, 0, i);
+	*fmt = ft_atoi(out);
+	ft_strdel(&out);
 	return (i);
 }
