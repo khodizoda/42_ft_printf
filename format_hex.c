@@ -6,7 +6,7 @@
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/23 22:10:00 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/07/25 00:23:23 by gkhodizo         ###   ########.fr       */
+/*   Updated: 2020/07/26 15:26:12 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 ** for 'X' and 'x' specifiers it removes leading zeros from the hex_string.
 ** for 'p' specifier it removes leading zeros and adds '0x' in the beginning
 ** of the hex_string.
-** for 'x' and 'p' it changed uppercase letters to lowercase letters.
+** for 'x' and 'p' it changes the uppercase letters to the lowercase letters.
 ** Returns formated hex_string.
 */
 

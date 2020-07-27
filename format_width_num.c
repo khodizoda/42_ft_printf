@@ -6,12 +6,12 @@
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/24 15:15:11 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/07/25 00:16:56 by gkhodizo         ###   ########.fr       */
+/*   Updated: 2020/07/26 15:40:13 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** The format_width_char() formats str only for numeric specifiers
+** The format_width_num() formats str only for numeric specifiers
 ** i.e. "diuxX" given width and flags.
 */
 

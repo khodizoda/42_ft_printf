@@ -6,19 +6,21 @@
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/24 15:16:53 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/07/25 00:11:23 by gkhodizo         ###   ########.fr       */
+/*   Updated: 2020/07/26 15:53:34 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 ** The format_input() formats str, given flags, width and precision.
-** Then it prints formated str to strout.
+** Then it prints formatted str to stdout.
 */
 
 #include "ft_printf.h"
 
 void	format_input(t_fmt *fmt, t_len *pf_len)
 {
+	size_t	len;
+
 	if (ft_strchr("csp%", fmt->specifier))
 	{
 		format_precision_char(fmt);
@@ -32,7 +34,8 @@ void	format_input(t_fmt *fmt, t_len *pf_len)
 		format_precision_num(fmt);
 		format_width_num(fmt);
 	}
-	pf_len->print_len += ft_strlen(fmt->spec_value);
-	ft_putstr_len(fmt->spec_value, ft_strlen(fmt->spec_value));
+	len = ft_strlen(fmt->spec_value);
+	pf_len->print_len += len;
+	ft_putstr_len(fmt->spec_value, len);
 	return ;
 }

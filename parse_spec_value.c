@@ -6,13 +6,13 @@
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/22 15:06:58 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/07/25 00:09:26 by gkhodizo         ###   ########.fr       */
+/*   Updated: 2020/07/26 15:21:11 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 ** The parse_spec_value() parses values from va_list, using parsed specifiers.
-** Values are converted as needed.
+** Values are converted to (char *) as needed.
 */
 
 #include "ft_printf.h"
