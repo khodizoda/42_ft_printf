@@ -3,8 +3,9 @@
 *.a
 *.o
 *.txt
-main.c
+main*
 a.out
 a.out.dSYM
-test*
+*.gch
+*test*
 42*

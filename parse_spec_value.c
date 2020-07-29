@@ -6,7 +6,7 @@
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/22 15:06:58 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/07/26 23:18:46 by gkhodizo         ###   ########.fr       */
+/*   Updated: 2020/07/29 02:23:36 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,6 @@ void	parse_spec_value(t_fmt *fmt, va_list *ap)
 						unsigned int), 16), fmt->specifier);
 	if (fmt->specifier == '%')
 		fmt->spec_value = char_to_str('%');
-	fmt->value_len = ft_strlen(fmt->spec_value);
+	fmt->value_len = fmt->spec_value == NULL ? 0 : ft_strlen(fmt->spec_value);
 	return ;
 }

@@ -6,7 +6,7 @@
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/18 20:10:07 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/07/24 19:43:02 by gkhodizo         ###   ########.fr       */
+/*   Updated: 2020/07/27 02:52:07 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -126,6 +126,6 @@ char				*char_to_str(char c);
 size_t				ft_count_begin_char(char *str, char c);
 char				*ft_strsubjoin(char const *s1, char const *s2,
 					unsigned int s2_start);
-char				*free_n_copy(char *str, int start, int len);
+char				*free_n_copy(char *str, int start, size_t len);
 
 #endif

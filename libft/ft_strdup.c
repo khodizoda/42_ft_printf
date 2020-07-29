@@ -6,7 +6,7 @@
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 22:02:56 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/02/19 22:02:58 by gkhodizo         ###   ########.fr       */
+/*   Updated: 2020/07/29 01:40:11 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ char	*ft_strdup(const char *s1)
 	size_t	len;
 	char	*dup;
 
+	if (!s1)
+		return (NULL);
 	i = 0;
 	len = ft_strlen(s1);
 	dup = (char *)malloc((len + 1) * sizeof(char));

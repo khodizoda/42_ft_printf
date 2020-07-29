@@ -6,7 +6,7 @@
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/24 15:14:46 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/07/27 02:00:37 by gkhodizo         ###   ########.fr       */
+/*   Updated: 2020/07/29 02:27:57 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,10 @@ void	format_precision_char(t_fmt *fmt)
 	if (fmt->specifier == 's'
 		&& fmt->precision < fmt->value_len
 		&& fmt->is_precision == 1)
-		fmt->spec_value = free_n_copy(fmt->spec_value, 0,
-							(int)fmt->precision);
+	{
+			fmt->spec_value = free_n_copy(fmt->spec_value, 0,
+								fmt->precision);
+			fmt->value_len = fmt->precision;
+	}
 	return ;
 }
