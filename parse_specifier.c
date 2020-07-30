@@ -6,7 +6,7 @@
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/19 22:13:16 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/07/26 15:20:16 by gkhodizo         ###   ########.fr       */
+/*   Updated: 2020/07/30 17:25:21 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int		parse_specifier(char *str, t_fmt *fmt, va_list *ap)
 	char	*specs;
 
 	i = 0;
-	specs = "cspdiuxX%%";
+	specs = "cspdiuxX%";
 	if (ft_strchr(specs, str[i]))
 	{
 		fmt->specifier = str[i];
