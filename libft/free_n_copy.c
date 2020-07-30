@@ -6,7 +6,7 @@
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/24 15:48:26 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/07/30 00:19:07 by gkhodizo         ###   ########.fr       */
+/*   Updated: 2020/07/30 19:32:04 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char	*free_n_copy(char *str, int start, size_t len)
 	char	*new;
 
 	i = 0;
-	if (!(new = (char *)malloc((len + 1) * sizeof(char))))
+	if (!(new = (char *)malloc(len * sizeof(char))))
 		return (NULL);
 	ft_strncpy(new, (str + start), len);
 	ft_strdel(&str);
