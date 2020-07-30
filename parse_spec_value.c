@@ -6,7 +6,7 @@
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/22 15:06:58 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/07/29 20:11:30 by gkhodizo         ###   ########.fr       */
+/*   Updated: 2020/07/30 16:10:15 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,16 @@
 
 void	parse_spec_value(t_fmt *fmt, va_list *ap)
 {
+	char *tmp;
+
 	if (fmt->specifier == 'c')
 		fmt->spec_value = char_to_str((unsigned char)va_arg(*ap, int));
 	else if (fmt->specifier == 's')
-		fmt->spec_value = ft_strdup(va_arg(*ap, char *));
+	{
+		tmp = ft_strdup(va_arg(*ap, char *));
+		fmt->spec_value = tmp == NULL ? ft_strdup("(null)") : ft_strdup(tmp);
+		ft_strdel(&tmp);
+	}
 	else if (fmt->specifier == 'p')
 		fmt->spec_value = format_hex(ft_itoa_base_unsigned(va_arg(*ap,
 						unsigned long long int), 16), fmt->specifier);
@@ -35,8 +41,7 @@ void	parse_spec_value(t_fmt *fmt, va_list *ap)
 						unsigned int), 16), fmt->specifier);
 	else if (fmt->specifier == '%')
 		fmt->spec_value = char_to_str('%');
-	if (ft_strchr(fmt->spec_value, '-'))
+	if (fmt->spec_value && ft_strchr(fmt->spec_value, '-'))
 		fmt->is_value_negative = 1;
 	fmt->value_len = fmt->spec_value == NULL ? 0 : ft_strlen(fmt->spec_value);
-	return ;
 }
