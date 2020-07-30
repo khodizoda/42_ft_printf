@@ -6,7 +6,7 @@
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/24 15:16:53 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/07/29 02:36:25 by gkhodizo         ###   ########.fr       */
+/*   Updated: 2020/07/29 20:00:30 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 
 void	format_input(t_fmt *fmt, t_len *pf_len)
 {
-	if (ft_strchr("csp%", fmt->specifier))
+	if (ft_strchr("csp%%", fmt->specifier))
 	{
 		format_precision_char(fmt);
 		if (fmt->specifier == '%')

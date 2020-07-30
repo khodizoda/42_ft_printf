@@ -6,7 +6,7 @@
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/23 22:10:00 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/07/27 02:21:24 by gkhodizo         ###   ########.fr       */
+/*   Updated: 2020/07/29 19:46:16 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@
 
 char	*format_hex(char *hex, char c)
 {
-	size_t	len;
-	size_t	rem;
+	int		len;
+	int		rem;
 	char	*new;
 
 	len = ft_strlen(hex);
@@ -37,7 +37,7 @@ char	*format_hex(char *hex, char c)
 	ft_strdel(&hex);
 	len = ft_strlen(new);
 	if (c == 'x' || c == 'p')
-		while (len)
+		while (len >= 0)
 		{
 			new[len] = ft_tolower(new[len]);
 			--len;

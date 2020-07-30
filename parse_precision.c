@@ -6,7 +6,7 @@
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/19 22:12:41 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/07/27 01:59:04 by gkhodizo         ###   ########.fr       */
+/*   Updated: 2020/07/30 00:16:39 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 
 #include "ft_printf.h"
 
-int			parse_precision(char *str, t_fmt *fmt, va_list *ap)
+int	parse_precision(char *str, t_fmt *fmt, va_list *ap)
 {
 	int		i;
 	ssize_t tmp;
@@ -33,7 +33,7 @@ int			parse_precision(char *str, t_fmt *fmt, va_list *ap)
 		{
 			tmp = va_arg(*ap, int);
 			fmt->precision = tmp < 0 ? 0 : tmp;
-			fmt->negative_prec = ft_absolute_val(tmp);
+			fmt->negative_prec = tmp < 0 ? ft_absolute_val(tmp) : 0;
 			++i;
 		}
 		else if (ft_isdigit(str[i]))

@@ -6,7 +6,7 @@
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/24 15:15:04 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/07/29 02:39:10 by gkhodizo         ###   ########.fr       */
+/*   Updated: 2020/07/30 00:15:13 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	format_width_char(t_fmt *fmt)
 {
 	if (fmt->width > fmt->value_len)
 	{
-		fmt->spec_value = format_padding(fmt, ' ', 
+		fmt->spec_value = format_padding(fmt, ' ',
 							fmt->width, (int)fmt->is_minus);
 		fmt->value_len = fmt->width;
 	}
