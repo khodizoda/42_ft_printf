@@ -6,7 +6,7 @@
 #    By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/19 15:57:52 by gkhodizo          #+#    #+#              #
-#    Updated: 2020/07/24 19:43:05 by gkhodizo         ###   ########.fr        #
+#    Updated: 2020/07/30 17:15:39 by gkhodizo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,6 +47,7 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	ar rc $(NAME) $(OBJ)
+	ranlib $(NAME)
 
 $(OBJ):
 	$(CC) $(CFLAGS) -c $(SRCS)
