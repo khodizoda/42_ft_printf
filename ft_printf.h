@@ -6,7 +6,7 @@
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/27 14:17:59 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/07/31 22:10:53 by gkhodizo         ###   ########.fr       */
+/*   Updated: 2020/08/01 13:17:41 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,7 @@ void			parse_spec_value(t_fmt *fmt, va_list *ap);
 **	format string
 */
 
+void			null_char(t_fmt *fmt, t_len *pf_len);
 char			*format_hex(char *hex, char c);
 void			format_input(t_fmt *fmt, t_len *pf_len);
 void			format_precision_char(t_fmt *fmt);
