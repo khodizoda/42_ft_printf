@@ -6,7 +6,7 @@
 #    By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/07/15 00:44:17 by gkhodizo          #+#    #+#              #
-#    Updated: 2020/07/27 01:25:49 by gkhodizo         ###   ########.fr        #
+#    Updated: 2020/08/01 13:21:45 by gkhodizo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,6 +30,7 @@ NAMES = ./ft_printf \
 		./parse_numeric \
 		./parse_specifier \
 		./parse_spec_value \
+		./null_char \
 		./format_hex \
 		./format_input \
 		./format_padding \
