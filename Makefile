@@ -6,7 +6,7 @@
 #    By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/07/15 00:44:17 by gkhodizo          #+#    #+#              #
-#    Updated: 2020/08/01 13:21:45 by gkhodizo         ###   ########.fr        #
+#    Updated: 2020/08/01 14:14:05 by gkhodizo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,23 +21,23 @@ CFLAGS =  -g -Wall -Wextra -Werror
 HEADER = -I ft_printf.h
 
 NAMES = ./ft_printf \
-		./init_format \
-		./reset_format \
-		./parse_input \
-		./parse_flags \
-		./parse_width \
-		./parse_precision \
-		./parse_numeric \
-		./parse_specifier \
-		./parse_spec_value \
-		./null_char \
-		./format_hex \
-		./format_input \
-		./format_padding \
-		./format_precision_char \
-		./format_precision_num \
-		./format_width_char \
-		./format_width_num \
+		./pf_init_format \
+		./pf_reset_format \
+		./pf_parse_input \
+		./pf_parse_flags \
+		./pf_parse_width \
+		./pf_parse_precision \
+		./pf_parse_numeric \
+		./pf_parse_specifier \
+		./pf_parse_spec_value \
+		./pf_null_char \
+		./pf_format_hex \
+		./pf_format_input \
+		./pf_format_padding \
+		./pf_format_precision_char \
+		./pf_format_precision_num \
+		./pf_format_width_char \
+		./pf_format_width_num \
 
 SRCS = $(addsuffix .c, $(NAMES))
 
