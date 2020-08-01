@@ -6,7 +6,7 @@
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/19 22:12:12 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/07/26 23:18:35 by gkhodizo         ###   ########.fr       */
+/*   Updated: 2020/07/31 22:05:20 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,8 @@ void		parse_input(char *str, t_fmt *fmt, t_len *pf_len, va_list *ap)
 			++i;
 			reset_format(fmt);
 			i += parse_format((str + i), fmt, ap);
+			if (fmt->specifier == '\0')
+				return;
 			format_input(fmt, pf_len);
 		}
 		else
