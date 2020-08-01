@@ -6,7 +6,7 @@
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/27 14:17:59 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/07/30 17:16:01 by gkhodizo         ###   ########.fr       */
+/*   Updated: 2020/07/31 22:10:53 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 
 typedef struct	s_fmt
 {
+	size_t		is_null;
 	size_t		is_minus;
 	size_t		is_zero;
 	size_t		width;
@@ -35,7 +36,7 @@ typedef struct	s_fmt
 
 typedef struct	s_len
 {
-	int			print_len;
+	size_t		print_len;
 }				t_len;
 
 /*

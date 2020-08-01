@@ -6,7 +6,7 @@
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/19 23:09:18 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/07/29 20:10:28 by gkhodizo         ###   ########.fr       */
+/*   Updated: 2020/07/31 22:48:41 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 
 void	init_format(t_fmt *fmt, t_len *pf_len)
 {
+	fmt->is_null = 0;
 	fmt->is_minus = 0;
 	fmt->is_zero = 0;
 	fmt->width = 0;

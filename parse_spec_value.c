@@ -6,7 +6,7 @@
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/22 15:06:58 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/07/31 22:22:16 by gkhodizo         ###   ########.fr       */
+/*   Updated: 2020/07/31 22:53:14 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,8 @@ void	parse_spec_value(t_fmt *fmt, va_list *ap)
 		fmt->spec_value = char_to_str('%');
 	else
 		return ;
-	if (fmt->spec_value && ft_strchr(fmt->spec_value, '-'))
+	if (fmt->spec_value && ft_strchr(fmt->spec_value, '-')) //if spec_value == numeric
 		fmt->is_value_negative = 1;
+	fmt->is_null = ft_strcmp(fmt->spec_value, "0x0") == 0 ? 1 : 0;
 	fmt->value_len = fmt->spec_value == NULL ? 0 : ft_strlen(fmt->spec_value);
 }
