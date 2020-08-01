@@ -6,13 +6,13 @@
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/01 13:13:05 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/08/01 13:22:33 by gkhodizo         ###   ########.fr       */
+/*   Updated: 2020/08/01 13:57:16 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 ** The null_char() is a function to handle special case, when char passed
-** to ft_printf is == '\0'. It also supports width specified with char. 
+** to ft_printf is == '\0'. It also supports width specified with char.
 */
 
 #include "ft_printf.h"
