@@ -6,13 +6,13 @@
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 20:38:26 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/02/25 20:38:27 by gkhodizo         ###   ########.fr       */
+/*   Updated: 2020/08/02 12:40:37 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** Allocates (with malloc(3)) and returns an array of “fresh” strings
-** (all ending with ’\0’, including the array itself) obtained by spliting
+** Allocates (with malloc(3)) and returns an array of "fresh" strings
+** (all ending with '\0', including the array itself) obtained by spliting
 ** s using the character c as a delimiter.
 ** If the allocation fails the function returns NULL.
 */

@@ -6,13 +6,13 @@
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/23 15:22:10 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/02/23 15:22:11 by gkhodizo         ###   ########.fr       */
+/*   Updated: 2020/08/02 12:39:55 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 ** Lexicographical comparison between s1 and s2 up to n characters or
-** until a ’\0’ is reached. If the 2 strings are identical, the function
+** until a '\0' is reached. If the 2 strings are identical, the function
 ** returns 1, or 0 otherwise.
 */
 

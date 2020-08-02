@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strncpy.c                                          :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 22:59:15 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/02/19 22:59:17 by gkhodizo         ###   ########.fr       */
+/*   Updated: 2020/08/02 12:39:49 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 ** The ft_strncpy() functions copy at most len characters from src into dst.
 ** If src is less than len characters long, the remainder of dst is filled
-** with `\0'. Otherwise, dst is not terminated.
+** with '\0'. Otherwise, dst is not terminated.
 ** The source and destination strings should not overlap,
 ** as the behavior is undefined.
 ** Returns dst.

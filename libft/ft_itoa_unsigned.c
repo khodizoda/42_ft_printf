@@ -6,12 +6,12 @@
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/23 15:19:06 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/07/23 23:40:08 by gkhodizo         ###   ########.fr       */
+/*   Updated: 2020/08/02 12:34:49 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** Allocates (with malloc(3)) and returns a “fresh” string ending with ’\0’
+** Allocates (with malloc(3)) and returns a "fresh" string ending with '\0'
 ** representing the integer n given as argument. Negative numbers ARE NOT
 ** supported. If the allocation fails, the function returns NULL.
 */

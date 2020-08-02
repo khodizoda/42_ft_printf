@@ -6,13 +6,13 @@
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 15:42:06 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/07/30 00:18:01 by gkhodizo         ###   ########.fr       */
+/*   Updated: 2020/08/02 12:39:14 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 ** The ft_strlen() function computes the length of the string s.
-** Returns the number of characters that precede the terminating NUL character
+** Returns the number of characters that precede the terminating NUL character.
 */
 
 #include "libft.h"

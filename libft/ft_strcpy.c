@@ -6,13 +6,13 @@
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 22:46:18 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/02/19 22:46:19 by gkhodizo         ###   ########.fr       */
+/*   Updated: 2020/08/02 12:38:27 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 ** The ft_strcpy() functions copy the string src to dst
-** (including the terminating `\0' character.)
+** (including the terminating '\0' character.)
 ** Returns dst.
 */
 

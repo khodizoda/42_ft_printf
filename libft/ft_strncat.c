@@ -6,13 +6,13 @@
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 11:10:58 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/02/20 11:11:00 by gkhodizo         ###   ########.fr       */
+/*   Updated: 2020/08/02 12:39:37 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 ** The ft_strncat() function appends not more than n characters from s2,
-** and then adds a terminating `\0'.
+** and then adds a terminating '\0'.
 ** Returns the pointer s1.
 */
 

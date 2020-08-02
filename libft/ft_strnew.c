@@ -6,13 +6,13 @@
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/21 19:31:31 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/07/25 01:26:30 by gkhodizo         ###   ########.fr       */
+/*   Updated: 2020/08/02 12:40:09 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** Allocates (with malloc(3)) and returns a “fresh” string ending with ’\0’.
-** Each character of the string is initialized at ’\0’.
+** Allocates (with malloc(3)) and returns a "fresh" string ending with '\0'.
+** Each character of the string is initialized at '\0'.
 ** If the allocation fails the function returns NULL.
 */
 

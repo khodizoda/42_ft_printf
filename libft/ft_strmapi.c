@@ -6,13 +6,13 @@
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/23 14:25:20 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/02/23 14:25:21 by gkhodizo         ###   ########.fr       */
+/*   Updated: 2020/08/02 12:39:30 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 ** Applies the function f to each character of the string passed as argument
-** by giving its index as first argument to create a “fresh” new string
+** by giving its index as first argument to create a "fresh" new string
 ** (with malloc(3)) resulting from the successive applications of f.
 */
 

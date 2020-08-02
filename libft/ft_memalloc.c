@@ -6,12 +6,12 @@
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/21 16:02:36 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/02/21 16:02:38 by gkhodizo         ###   ########.fr       */
+/*   Updated: 2020/08/02 12:36:28 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** Allocates (with malloc(3)) and returns a “fresh” memory area.
+** Allocates (with malloc(3)) and returns a "fresh" memory area.
 ** The memory allocated is initialized to 0. If the allocation fails,
 ** the function returns NULL.
 ** Returns the allocated memory area.

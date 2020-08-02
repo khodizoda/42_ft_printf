@@ -6,12 +6,12 @@
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/23 19:01:12 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/07/29 15:55:16 by gkhodizo         ###   ########.fr       */
+/*   Updated: 2020/08/02 12:38:53 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** Allocates (with malloc(3)) and returns a “fresh” string ending with ’\0’,
+** Allocates (with malloc(3)) and returns a "fresh" string ending with '\0',
 ** result of the concatenation of s1 and s2. If the allocation fails the
 ** function returns NULL.
 */

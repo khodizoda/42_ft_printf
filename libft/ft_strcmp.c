@@ -6,7 +6,7 @@
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 19:57:15 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/07/29 02:22:23 by gkhodizo         ###   ########.fr       */
+/*   Updated: 2020/08/02 12:38:22 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 ** The ft_strcmp() compares the null-terminated strings s1 and s2.
 ** Returns an integer greater than, equal to, or less than 0, according
 ** as the string s1 is greater than, equal to, or less than the string s2.
-** The comparison is done using unsigned characters, so that `\200'
+** The comparison is done using unsigned characters, so that '\200'
 ** is greater than '\0'.
 */
 

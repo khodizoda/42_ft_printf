@@ -6,15 +6,15 @@
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/23 19:16:55 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/02/23 19:16:56 by gkhodizo         ###   ########.fr       */
+/*   Updated: 2020/08/02 12:41:25 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 ** Allocates (with malloc(3)) and returns a copy of the string given as
 ** argument without whitespaces at the beginning or at the end of the string.
-** Will be considered as whitespaces the following characters ’ ’, ’\n’ and
-** ’\t’. If s has no whitespaces at the beginning or at the end, the function
+** Will be considered as whitespaces the following characters ' ', '\n' and
+** '\t'. If s has no whitespaces at the beginning or at the end, the function
 ** returns a copy of s. If the allocation fails the function returns NULL.
 */
 

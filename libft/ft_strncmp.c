@@ -6,7 +6,7 @@
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 20:28:19 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/02/20 20:28:20 by gkhodizo         ###   ########.fr       */
+/*   Updated: 2020/08/02 12:39:43 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 ** that appear after a '\0' character are not compared.
 ** Returns an integer greater than, equal to, or less than 0, according
 ** as the string s1 is greater than, equal to, or less than the string s2.
-** The comparison is done using unsigned characters, so that `\200'
+** The comparison is done using unsigned characters, so that '\200'
 ** is greater than '\0'.
 */
 

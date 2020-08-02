@@ -6,13 +6,13 @@
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 10:48:58 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/02/20 10:49:19 by gkhodizo         ###   ########.fr       */
+/*   Updated: 2020/08/02 12:37:50 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 ** The ft_strcat() append a copy of the null-terminated s2 to the end of the
-** null-terminated string s1, then add a terminating `\0'. The string s1
+** null-terminated string s1, then add a terminating '\0'. The string s1
 ** must have sufficient space to hold the result.
 ** Returns the pointer s1.
 */

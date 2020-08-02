@@ -6,14 +6,14 @@
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 18:37:57 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/02/20 18:37:58 by gkhodizo         ###   ########.fr       */
+/*   Updated: 2020/08/02 12:40:23 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 ** The ft_strnstr() locates the first occurrence of the null-terminated string
 ** needle in the string haystack, where not more than len characters are
-** searched. Characters that appear after a `\0' character are not searched.
+** searched. Characters that appear after a '\0' character are not searched.
 ** Return values: if needle is an empty string, haystack is returned;
 ** if needle occurs nowhere in haystack, NULL is returned; otherwise a pointer
 ** to the first character of the first occurrence of needle is returned.
