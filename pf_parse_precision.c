@@ -6,15 +6,15 @@
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/19 22:12:41 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/08/01 18:48:19 by gkhodizo         ###   ########.fr       */
+/*   Updated: 2020/08/02 10:37:09 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 ** The parse_precision() parses precision from str, and uses parse_numeric()
 ** to find numeric value of precision. If only '.' is set as a precision
-** in str precision value will be set to 0.
-** Retuns number of chars parsed.
+** in str, precision value will be set to 0.
+** Returns number of chars parsed.
 */
 
 #include "ft_printf.h"
