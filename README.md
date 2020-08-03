@@ -13,7 +13,7 @@ The printf() function writes the output under the control of a format string tha
 Upon successful return, pfrintf returns the number of characters printed (excluding the null byte used to end output to strings).
 If an output error is encountered, a negative value is returned.
 
-## About ft_printf
+## About [ft_printf](https://cdn.intra.42.fr/pdf/pdf/10819/en.subject.pdf)
 prototype:
 ```
 int    ft_printf(const char *format, ... );
