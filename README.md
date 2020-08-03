@@ -28,7 +28,7 @@ supported specifiers : cspdiuxX%
 | s | string |
 | p | pointer |
 | d / i | integers|
-| u | unsinged int|
+| u | unsigned int|
 | x | lowercase hexadecimal |
 | X | uppercase hexadecimal | 
 | % | percent sign |
