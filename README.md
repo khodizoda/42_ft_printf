@@ -3,7 +3,7 @@
 
 ## About [printf](https://linux.die.net/man/3/printf)
 
-```
+```terminal
 man 3 printf
 ```
 The printf() function writes the output under the control of a format string that specifies how subsequent arguments (or arguments accessed via the variable-length argument facilities of stdarg(3)) are converted for output.
@@ -15,7 +15,7 @@ If an output error is encountered, a negative value is returned.
 
 ## About [ft_printf](https://cdn.intra.42.fr/pdf/pdf/10819/en.subject.pdf)
 prototype:
-```
+```c
 int    ft_printf(const char *format, ... );
 ```
 ```
@@ -46,12 +46,12 @@ supported flags : 0-.*
 
 ## Usage
 Download and compile repo:
-```
+```terminal
 git clone https://github.com/khodizoda/42_ft_printf && cd 42_ft_printf && make
 ```
 Execute with:
-```
-gcc -Wall -Wextra -Werror -L. -lftprintf test.c && ./a.out
+```terminal
+gcc -Wall -Wextra -Werror -L. -lftprintf <yourfile.c> && ./a.out
 ```
 ## Moulinette
 ```
